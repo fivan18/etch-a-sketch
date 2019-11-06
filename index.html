@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="TUF-8">
+        <title>Etch a Sketch</title>
+        <style>
+            .container {
+                width: 550px;
+                height: 550px;
+                border: 5px solid black;
+            }       
+            .child {
+                border: 1px solid black;
+            }
+            .child:hover {
+                background-color: black;
+            }
+
+
+
+            #etch-a-sketch{
+                width: 1000px;
+                height: 800px;
+                border: 1px solid black;
+                margin-top: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                display: grid;
+                grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+            }
+            #display {
+                grid-row: 1 / span 3;
+                grid-column: 1 / span 4;
+                border: 1px solid black;
+            }
+            #b-gradient {
+                grid-row: 4 / span 1;
+                grid-column: 1 / span 1;
+                border: 1px solid black;
+            }
+            #i-square {
+                grid-row: 4 / span 1;
+                grid-column: 2 / span 2;
+                border: 1px solid black;
+            }
+            #b-reset {
+                grid-row: 4 / span 1;
+                grid-column: 4 / span 1;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div id="etch-a-sketch">
+                <div id="display">
+                    <div class="container"></div>
+                </div>
+                <div id="b-gradient">
+                    <button>Gradient</button>
+                </div>
+                <div id="i-square">
+                    <input type="text">
+                </div>
+                <div id="b-reset">
+                    <button>Reset</button>
+                </div>
+            </div>
+        </main>
+        <script src="./scripts/etch-a-sketch.js"></script>
+    </body>
+</html>
