@@ -24,8 +24,26 @@ function createGrid(rows, columns) {
     ruleContainer.gridTemplateRows = `repeat(${rows}, 1fr)`;
 }
 
+function setSquareEventListener(){
+    const squares = Array.from(document.querySelectorAll(".container > .child"));
+    squares.forEach(square => {
+        square.addEventListener("mouseover", function(event){
+            if(true){
+                event.target.style.backgroundColor = "black";
+            } else{
+                event.target.style.backgroundColor = "black";
+            }
+        });
+    });
+}
 
 
+fillContainer(64, 64);
+createGrid(64, 64);
 
-fillContainer(16, 16);
-createGrid(16, 16);
+setSquareEventListener();
+
+const ruleChild = searchSpecificRule(".child");
+ruleChild.opacity = 0.5;
+
+/* It has to be with inline style */
