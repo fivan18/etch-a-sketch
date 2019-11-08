@@ -9,14 +9,10 @@
                 height: 550px;
                 border: 5px solid black;
             }       
-            .child {
-            }
-
 
             #etch-a-sketch{
                 width: 1000px;
                 height: 800px;
-                border: 1px solid black;
                 margin-top: 100px;
                 margin-left: auto;
                 margin-right: auto;
@@ -26,22 +22,18 @@
             #display {
                 grid-row: 1 / span 3;
                 grid-column: 1 / span 4;
-                border: 1px solid black;
             }
             #b-gradient {
                 grid-row: 4 / span 1;
                 grid-column: 1 / span 1;
-                border: 1px solid black;
             }
             #i-square {
                 grid-row: 4 / span 1;
                 grid-column: 2 / span 2;
-                border: 1px solid black;
             }
             #b-reset {
                 grid-row: 4 / span 1;
                 grid-column: 4 / span 1;
-                border: 1px solid black;
             }
             #display, #b-gradient, #i-square, #b-reset{
                 display: flex;
@@ -50,9 +42,12 @@
             }
             
             .toggle-gradient {
-                background-color: red;
+                background: #0053ba;
+                outline: 1px solid #fff;
+                outline-offset: -4px;
             }
-        </style>
+        </style>        
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <main>
@@ -64,9 +59,7 @@
                     <button>Gradient</button>
                 </div>
                 <div id="i-square">
-                    <span>16</span>
-                    <input type="range" min="16" max="64" step="1" value="16">
-                    <span>64</span>
+                    <input type="range" min="16" max="64" step="1" value="16" class="form-control-range">
                 </div>
                 <div id="b-reset">
                     <button>Reset</button>

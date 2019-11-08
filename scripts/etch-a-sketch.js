@@ -81,5 +81,3 @@ document.querySelector("#b-gradient > button").addEventListener("click", functio
 
 
 
-
-
